@@ -142,6 +142,7 @@ DEPENDENCIES
   dm-migrations
   dm-postgres-adapter
   dm-transactions
+  json
   rack
   rake
   rspec

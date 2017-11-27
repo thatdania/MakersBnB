@@ -7,6 +7,7 @@ gem 'data_mapper'
 gem 'dm-postgres-adapter'
 gem 'dm-migrations'
 gem 'dm-transactions'
+gem 'json'
 gem 'sinatra'
 gem 'rack'
 
