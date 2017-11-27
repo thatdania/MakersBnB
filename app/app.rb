@@ -22,10 +22,15 @@ class MakersBnB < Sinatra::Base
     redirect '/rental/list'
   end
 
-get '/rental/list' do
-  headers 'Access-Control-Allow-Origin' => '*'
-  content_type :json
-  Rental.all.to_json
-end
+  get '/rental/list' do
+    headers 'Access-Control-Allow-Origin' => '*'
+    content_type :json
+    Rental.all.to_json
+  end
+
+  get '/welcome' do
+    "Hello"
+    erb :welcome
+  end
 
 end
