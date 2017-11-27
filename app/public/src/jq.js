@@ -1,19 +1,26 @@
 $(document).ready(function() {
 
-  sessionGet()
+  rentalsGet()
 
-  function sessionGet() {
+  function rentalsGet() {
+    var index = 0
     $.get('/rental/list', function(data){
-      var list = data
-      console.log(list)
-      $('#list').html(list[0].name)
-    });
-  }
+      data.forEach(function(element) {
+      eachRental(element)
+      index++;
+      });
+   });
+ }
+  function eachRental(element) {
+   $('#rental').append("<div class='name'>" + element.name + "</div>")
+   $('#rental').append("<div class='location'>" + element.location + "</div>")
+   $('#rental').append("<div class='price'>" + element.price + "</div>")
+   $('#rental').append("<div class='capacity'>" + element.capacity + "</div>")
+  };
 });
-
-
-
-
+//
+// $('#myDiv').html("<div id='mySecondDiv'></div>");
+// $("#foo").append("<div>hello world</div>")
 
 
 
