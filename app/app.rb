@@ -40,5 +40,4 @@ class MakersBnB < Sinatra::Base
     "Hello"
     erb :welcome
   end
-
 end
