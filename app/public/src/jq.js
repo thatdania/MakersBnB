@@ -12,14 +12,34 @@ $(document).ready(function() {
    });
  }
   function eachRental(element, index) {
-    var container = "rental"+index
-   $('#rentals').append("<div id="+container+" class='individual' style='margin-top: 20;'></div>");
+    var container = index
+   $('#rentals').append("<div id="+container+" class='individual' style='margin-top: 20;'>hello</div>");
    $("#"+container).append("<div id = 'whatever' class='name'>" + element.name + "</div>")
    $("#"+container).append("<div class='location'>" + element.location + "</div>")
    $("#"+container).append("<div class='price'>" + element.price + "</div>")
    $("#"+container).append("<div class='capacity'>" + element.capacity + "</div>")
+   $("#"+container).append("<button id='more-info"+element.id+"' type='submit' value="+element.id+" class='rental_id'>More Info</button>")
+   $("#more-info"+element.id).bind('click', function(){
+    //  alert("clicked");
+     console.log($("#more-info"+element.id).val())
+   });
   };
+
+
+
+  // $('#more-info').submit(function(event){
+  //   event.preventDefault();
+  //   // var rental = document.getElementById("")
+  //   // console.log(rental)
+  //   var info = document.getElementById("test")
+  //   console.log(info)
+  //   // individualRental(id)
+  // });
+
 });
+
+
+
 //
 // $('#myDiv').html("<div id='mySecondDiv'></div>");
 // $("#foo").append("<div>hello world</div>")
