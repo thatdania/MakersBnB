@@ -3,7 +3,7 @@ $(document).ready(function() {
   rentalsGet()
 
   function rentalsGet() {
-    var index = 0
+    var index = 1
     $.get('/rental/list', function(data){
       data.forEach(function(element) {
       eachRental(element, index)
@@ -13,7 +13,7 @@ $(document).ready(function() {
  }
   function eachRental(element, index) {
     var container = "rental"+index
-   $('#rentals').append("<div id="+container+" class='individual' style='background-color: #f2f2f2; margin-top: 20;'></div>");
+   $('#rentals').append("<div id="+container+" class='individual' style='margin-top: 20;'></div>");
    $("#"+container).append("<div id = 'whatever' class='name'>" + element.name + "</div>")
    $("#"+container).append("<div class='location'>" + element.location + "</div>")
    $("#"+container).append("<div class='price'>" + element.price + "</div>")
