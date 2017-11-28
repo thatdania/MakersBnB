@@ -6,16 +6,18 @@ $(document).ready(function() {
     var index = 0
     $.get('/rental/list', function(data){
       data.forEach(function(element) {
-      eachRental(element)
+      eachRental(element, index)
       index++;
       });
    });
  }
-  function eachRental(element) {
-   $('#rental').append("<div class='name'>" + element.name + "</div>")
-   $('#rental').append("<div class='location'>" + element.location + "</div>")
-   $('#rental').append("<div class='price'>" + element.price + "</div>")
-   $('#rental').append("<div class='capacity'>" + element.capacity + "</div>")
+  function eachRental(element, index) {
+    var container = "rental"+index
+   $('#rentals').append("<div id="+container+" class='individual' style='background-color: #f2f2f2; margin-top: 20;'></div>");
+   $("#"+container).append("<div id = 'whatever' class='name'>" + element.name + "</div>")
+   $("#"+container).append("<div class='location'>" + element.location + "</div>")
+   $("#"+container).append("<div class='price'>" + element.price + "</div>")
+   $("#"+container).append("<div class='capacity'>" + element.capacity + "</div>")
   };
 });
 //
