@@ -28,6 +28,14 @@ class MakersBnB < Sinatra::Base
     Rental.all.to_json
   end
 
+  post '/rental/overview' do
+    @id = params[:id]
+    @rental = Rental.get(params[:id])
+    "hello"
+    p params
+    erb :rental_overview
+  end
+
   get '/welcome' do
     "Hello"
     erb :welcome

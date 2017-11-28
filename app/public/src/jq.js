@@ -18,11 +18,12 @@ $(document).ready(function() {
    $("#"+container).append("<div class='location'>" + element.location + "</div>")
    $("#"+container).append("<div class='price'>" + element.price + "</div>")
    $("#"+container).append("<div class='capacity'>" + element.capacity + "</div>")
-   $("#"+container).append("<button id='more-info"+element.id+"' type='submit' value="+element.id+" class='rental_id'>More Info</button>")
-   $("#more-info"+element.id).bind('click', function(){
-    //  alert("clicked");
-     console.log($("#more-info"+element.id).val())
-   });
+   $("#"+container).append("<form action='/rental/overview' method='post'><button id='more-info"+element.id+"' type='submit' name='id' value="+element.id+" class='rental_id'>More Info</button></form>")
+
+  //  $("#more-info"+element.id).bind('click', function(){
+  //   //  alert("clicked");
+  //    console.log($("#more-info"+element.id).val())
+  //  });
   };
 
 
