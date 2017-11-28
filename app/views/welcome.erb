@@ -1,27 +1,62 @@
 <head>
-<style>
-.name {
-  color: #E15127;
-};
-.individual {
-  background-color: red;
+  <style>
+    .name {
+      color: #E15127;
+    };
+    .individual {
+      background-color: red;
 
-}
+    }
 
 
-</style>
+  </style>
   <!-- <link rel="stylesheet" type="text/css" href="/style.css"> -->
   <!-- <script src = "/src/Thermostat.js"></script> -->
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src = "/src/jq.js"></script>
 </head>
 <body>
-<div id = "rentals">
-</div>
+
+  <input type="text" id="citySearch" onkeyup="searchCity()"
+    placeholder="Search for city.." title="Search by city">
+
+  <div id = "rentals">
+  </div>
 
 
-<!-- <span id = "name"></span><br />
-<span id = "location"></span><br />
-<span id = "price"></span><br />
-<span id = "capacity"></span><br /> -->
+  <!-- <span id = "name"></span><br />
+  <span id = "location"></span><br />
+  <span id = "price"></span><br />
+  <span id = "capacity"></span><br /> -->
+
+  <script>
+    function searchCity() {
+      var input, filter, ul, li, a, i;
+      input = document.getElementById("citySearch");
+      filter = input.value.toUpperCase();
+      rentals = document.getElementById("rentals");
+      rentalName = rentals.getElementsByClassName("name");
+      rentalCity = rentals.getElementsByClassName("location");
+      rentalPrice = rentals.getElementsByClassName("price");
+      rentalCapacity = rentals.getElementsByClassName("capacity");
+      for (i = 0; i < rentalCity.length; i++) {
+        a = rentalName[i].getElementsByTagName("a")[0];
+        b = rentalCity[i].getElementsByTagName("b")[0];
+        c = rentalPrice[i].getElementsByTagName("c")[0];
+        d = rentalCapacity[i].getElementsByTagName("d")[0];
+        if (b.innerHTML.toUpperCase().indexOf(filter) > -1) {
+          rentalName[i].style.display = "";
+          rentalCity[i].style.display = "";
+          rentalPrice[i].style.display = "";
+          rentalCapacity[i].style.display = "";
+        } else {
+          rentalName[i].style.display = "none";
+          rentalCity[i].style.display = "none";
+          rentalPrice[i].style.display = "none";
+          rentalCapacity[i].style.display = "none";
+        }
+      }
+    }
+  </script>
+
 </body>

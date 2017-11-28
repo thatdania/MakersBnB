@@ -14,10 +14,10 @@ $(document).ready(function() {
   function eachRental(element, index) {
     var container = "rental"+index
    $('#rentals').append("<div id="+container+" class='individual' style='margin-top: 20;'></div>");
-   $("#"+container).append("<div id = 'whatever' class='name'>" + element.name + "</div>")
-   $("#"+container).append("<div class='location'>" + element.location + "</div>")
-   $("#"+container).append("<div class='price'>" + element.price + "</div>")
-   $("#"+container).append("<div class='capacity'>" + element.capacity + "</div>")
+   $("#"+container).append("<div id = 'whatever' class='name'><a href=\"#\">" + element.name + "</a></div>")
+   $("#"+container).append("<div class='location'><b href=\"#\">" + element.location + "</b></div>")
+   $("#"+container).append("<div class='price'><c href=\"#\">" + element.price + "</c></div>")
+   $("#"+container).append("<div class='capacity'><d href=\"#\">" + element.capacity + "</d></div>")
   };
 });
 //
