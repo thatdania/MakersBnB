@@ -11,4 +11,6 @@ class Rental
 
   belongs_to :user
 
+  has n, :images
+
 end

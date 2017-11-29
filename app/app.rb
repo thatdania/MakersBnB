@@ -18,9 +18,10 @@ class MakersBnB < Sinatra::Base
   post '/rental/new' do
     current_user = User.create(name: params[:user_name])
 
-    Rental.create(name: params[:name], location: params[:location],
+    current_rental = Rental.create(name: params[:name], location: params[:location],
       price: params[:price], capacity: params[:capacity], available: true,
       user_id: current_user.id)
+    current_image = Image.create(source: params[:picture], rental_id: current_rental.id)
     redirect '/rental/list'
   end
 
@@ -45,7 +46,7 @@ class MakersBnB < Sinatra::Base
   end
 
   get '/welcome' do
-    "Hello"
+    @image = Image.get(1)
     erb :welcome
   end
 end
