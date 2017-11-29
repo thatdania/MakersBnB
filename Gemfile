@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 ruby '2.4.1'
 
 gem 'bcrypt'
-gem 'data_mapper'
+gem 'data_mapper', '1.2.0'
 gem 'dm-postgres-adapter'
 gem 'dm-migrations'
 gem 'dm-transactions'
@@ -13,6 +13,7 @@ gem 'rack'
 
 group :test do
   gem 'capybara'
+  gem 'poltergeist'
   gem 'database_cleaner'
   gem 'rake'
   gem 'rspec'

@@ -3,6 +3,7 @@ ENV['RACK_ENV'] = 'test'
 require './app/models/data_mapper_setup.rb'
 require './app/models/user.rb'
 require './app/models/rental.rb'
+require 'capybara/poltergeist'
 require 'capybara/rspec'
 require 'simplecov'
 require 'simplecov-console'
@@ -12,6 +13,8 @@ require_relative './features/web_helpers'
 # require_relative './features/rental_spec'
 
 Capybara.app = MakersBnB
+
+Capybara.javascript_driver = :poltergeist
 
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|
@@ -23,8 +26,15 @@ RSpec.configure do |config|
   end
 
   config.before(:suite) do
-    DatabaseCleaner.strategy = :transaction
     DatabaseCleaner.clean_with(:truncation)
+  end
+
+  config.before(:each) do
+    DatabaseCleaner.strategy = :transaction
+  end
+
+  config.before(:each, js: true) do
+    DatabaseCleaner.strategy = :truncation
   end
 
   config.before(:each) do
