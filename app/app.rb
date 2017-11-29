@@ -8,6 +8,8 @@ require_relative './models/rental'
 
 class MakersBnB < Sinatra::Base
 
+  enable :sessions
+
   get '/rental/new' do
     headers 'Access-Control-Allow-Origin' => '*'
     erb :rental_new
@@ -28,11 +30,17 @@ class MakersBnB < Sinatra::Base
     Rental.all.to_json
   end
 
-  post '/rental/overview' do
-    @id = params[:id]
-    @rental = Rental.get(params[:id])
-    "hello"
-    p params
+  post '/rental/save' do
+    session[:rental] = Rental.get(params[:id])
+    redirect '/rental/overview'
+  end
+
+  get '/rental/current_view' do
+    content_type :json
+    session[:rental].to_json
+  end
+
+  get '/rental/overview' do
     erb :rental_overview
   end
 

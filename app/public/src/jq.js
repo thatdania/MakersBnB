@@ -26,8 +26,10 @@ $(document).ready(function() {
     $("#"+container).append("<div class='location'><b href=\"#\">" + element.location + "</b></div>")
     $("#"+container).append("<div class='price'><c href=\"#\">" + element.price + "</c></div>")
     $("#"+container).append("<div class='capacity'><d href=\"#\">" + element.capacity + "</d></div>")
-    $("#"+container).append("<form class='rentalButton' action='/rental/overview' method='post'><e href=\"#\"><button id='more-info"+element.id+"' type='submit' name='id' value="+element.id+" class='rental_id'>More Info</button></e></form>")
+    $("#"+container).append("<form class='rentalButton' action='/rental/save' method='post'><e href=\"#\"><button id='more-info"+element.id+"' type='submit' name='id' value="+element.id+" class='rental_id'>More Info</button></e></form>")
   };
+
+
 
   $("#selectCapacity").change(function() {
     search();
