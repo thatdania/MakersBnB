@@ -31,6 +31,7 @@ $(document).ready(function() {
 
 
 
+
   $("#selectCapacity").change(function() {
     search();
   });
