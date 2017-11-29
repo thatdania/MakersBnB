@@ -22,17 +22,13 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
-<<<<<<< HEAD
-    cliver (0.3.2)
-=======
     carrierwave (0.8.0)
       activemodel (>= 3.2.0)
       activesupport (>= 3.2.0)
     carrierwave-datamapper (0.2.2)
       carrierwave (~> 0.8.0)
-      dm-core (~> 1.1)
+    cliver (0.3.2)
     concurrent-ruby (1.0.5)
->>>>>>> pic
     data_mapper (1.2.0)
       dm-aggregates (~> 1.2.0)
       dm-constraints (~> 1.2.0)
@@ -169,23 +165,16 @@ PLATFORMS
 DEPENDENCIES
   bcrypt
   capybara
-<<<<<<< HEAD
-  data_mapper (= 1.2.0)
-=======
   carrierwave
   carrierwave-datamapper
-  data_mapper
->>>>>>> pic
+  data_mapper (= 1.2.0)
   database_cleaner
   dm-migrations
   dm-postgres-adapter
   dm-transactions
   json
-<<<<<<< HEAD
-  poltergeist
-=======
   mini_magick
->>>>>>> pic
+  poltergeist
   rack
   rake
   rspec
@@ -198,4 +187,4 @@ RUBY VERSION
    ruby 2.4.1p111
 
 BUNDLED WITH
-   1.16.0.pre.3
+   1.16.0
