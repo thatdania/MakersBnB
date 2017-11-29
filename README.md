@@ -1,9 +1,9 @@
-#AIRBNB Challenge:
+AIRBNB Challenge:
 ===============
 
 The challenge is to recreate as much of AIRBNB as possible within a week. Great fun.
 
-##MVP:  
+MVP:  
 ======
 
 ```
@@ -17,13 +17,13 @@ I would like to search properties by city
 
 As a user,
 When I'm looking on this MakersBNB,
-I would like to see the property overview that I've selected 
+I would like to see the property overview that I've selected
 
 ```
 We started off with listing all the AIRBNB user stories that could possibly exist from researching the workflow of how a User engages with AIRBNB.
 After that, we narrowed it down to three and chose the three user stories that would make our website unique
 
-##Other User Stories:
+Other User Stories:
 ====================
 
 ```
@@ -39,10 +39,10 @@ I would like to search properties by price
 ```
 
 
-##Team:
+Team:
 =======
 
-Dania Mah (https://github.com/thatdania)
-Lewis Youl (https://github.com/LewisYoul)
-Oleg Grushetskyy (https://github.com/olegfkl)
-Robert Clayton (https://github.com/RobertClayton)
+- Dania Mah (https://github.com/thatdania)
+- Lewis Youl (https://github.com/LewisYoul)
+- Oleg Grushetskyy (https://github.com/olegfkl)
+-  Robert Clayton (https://github.com/RobertClayton)
