@@ -42,3 +42,17 @@ def lewis_signup
   fill_in('password_confirmation', with: 'airbnbwithfrogs12')
   click_button('Sign Up')
 end
+
+def lewis_failed_login
+  visit '/'
+  fill_in('email', with: 'lewis@gmail.com')
+  fill_in('password', with: 'wrongpassword')
+  click_button('Login')
+end
+
+def lewis_sucess_login
+  visit '/'
+  fill_in('email', with: 'lewis@gmail.com')
+  fill_in('password', with: 'airbnbwithfrogs12')
+  click_button('Login')
+end

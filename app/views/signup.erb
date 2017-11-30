@@ -6,3 +6,7 @@ Enter your details to get started!
   <input type="password" name="password_confirmation" placeholder="Confirm Password">
   <button type="submit">Sign Up</button>
 </form>
+
+<% if flash[:message] %>
+<div class="message"><%= flash[:message] %></div>
+<% end %>

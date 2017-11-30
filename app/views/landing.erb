@@ -9,3 +9,7 @@ Welcome to MakersBnB
   <input type="password" name="password" placeholder="Password">
   <button type="submit">Login</button>
 </form>
+
+<% if flash[:error] %>
+<div> <%= flash[:error] %> </div>
+<% end %>

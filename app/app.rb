@@ -3,6 +3,7 @@ ENV['RACK_ENV'] ||= 'development'
 require 'bcrypt'
 require 'json'
 require 'sinatra/base'
+require 'sinatra/flash'
 require './app/models/data_mapper_setup'
 require_relative './models/user'
 require_relative './models/rental'
@@ -10,6 +11,7 @@ require_relative './models/rental'
 class MakersBnB < Sinatra::Base
 
   enable :sessions
+  register Sinatra::Flash
 
   helpers do
     def current_session_user
@@ -31,6 +33,7 @@ class MakersBnB < Sinatra::Base
       session[:email] = params[:email]
       redirect '/welcome'
     else
+      flash.now[:message] = 'Passwords do not match'
       erb :signup
     end
   end
@@ -41,7 +44,8 @@ class MakersBnB < Sinatra::Base
       session[:email] = params[:email]
       redirect '/welcome'
     else
-      redirect '/'
+      flash.now[:error] = 'Email and Password does not match'
+      erb :landing
     end
   end
 
