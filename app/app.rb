@@ -23,29 +23,18 @@ class MakersBnB < Sinatra::Base
       user_id: current_user.id)
     @current_image = Image.create(source: params[:picture], rental_id: @current_rental.id)
 
-    # Below comments help to explain file saving behaviour
-    # File.open(File.join(File.dirname(__FILE__), '..', 'uploads', params[:picture][:filename]), "w") do |f|
-    # f.write(params[:picture][:tempfile].read)
-    # end
-    # "<img src='#{@current_rental.images.first.source}' style='width:220px; height:300px;'>"
-
-    # redirect '/rental/list'
+    redirect '/welcome'
   end
 
   get '/rental/list' do
     headers 'Access-Control-Allow-Origin' => '*'
     content_type :json
     Rental.all_data.to_json
-    # Rental.all.to_json
-    # Image.all.to_json
   end
 
 
   post '/rental/save' do
     session[:rental] = Rental.individual(params[:id])
-    # session[:rental] = Rental.get(params[:id])
-    # session[:image] = Image.first(rental_id: params[:id])
-    # p session[:image]
     redirect '/rental/overview'
   end
 
