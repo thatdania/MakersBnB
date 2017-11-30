@@ -3,6 +3,4 @@ class ImageUploader < CarrierWave::Uploader::Base
   def extensions_white_list
         %w(jpg jpeg gif png)
     end
-  storage :file
-
 end

@@ -13,4 +13,17 @@ class Rental
 
   has n, :images
 
+  def self.all_data
+    data = []
+    self.all.each do | ind |
+      data <<  { id:       ind.id,
+                 name:     ind.name,
+                 location: ind.location,
+                 price:    ind.price,
+                 capacity: ind.capacity,
+                 images:   ind.images.first
+    }
+    end
+  data
+  end
 end
