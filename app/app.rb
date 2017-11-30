@@ -36,13 +36,13 @@ class MakersBnB < Sinatra::Base
   end
 
   post '/landing/login' do
-    user = User.first(email: params[:email])
+    user = User.authenticate(params[:email], params[:password])
     if user
       session[:email] = params[:email]
       redirect '/welcome'
     else
       redirect '/'
-    end 
+    end
   end
 
   get '/rental/new' do
