@@ -83,4 +83,9 @@ class MakersBnB < Sinatra::Base
     @image = Image.get(1)
     erb :welcome
   end
+
+  post '/welcome/logout' do
+    current_session_user = nil
+    redirect '/'
+  end
 end

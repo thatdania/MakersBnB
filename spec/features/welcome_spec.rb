@@ -35,4 +35,10 @@ feature 'welcome page', js: true do
     expect(page).not_to have_content('Cornwall')
     expect(page).to have_content('New York')
   end
+
+  scenario 'user can log out' do
+    lewis_signup
+    click_button('Logout')
+    expect(page).to have_current_path('/')
+  end
 end
