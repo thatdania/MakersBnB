@@ -23,11 +23,22 @@ def add_rental2
   click_on('submit')
 end
 
+def failed_signup
+  visit '/'
+  click_button('Sign Up')
+  fill_in('name', with: 'Lewis101')
+  fill_in('email', with: 'lewis@gmail.com')
+  fill_in('password', with: 'airbnbwithfrogs12')
+  fill_in('confirm_password', with: 'airbnbwithfrogs')
+  click_button('Sign Up')
+end
+
 def lewis_signup
   visit '/'
   click_button('Sign Up')
   fill_in('name', with: 'Lewis101')
   fill_in('email', with: 'lewis@gmail.com')
   fill_in('password', with: 'airbnbwithfrogs12')
+  fill_in('confirm_password', with: 'airbnbwithfrogs12')
   click_button('Sign Up')
 end

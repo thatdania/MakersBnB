@@ -9,7 +9,7 @@ require_relative './image.rb'
 
 
 
-DataMapper::Model.raise_on_save_failure = true
+# DataMapper::Model.raise_on_save_failure = true
 DataMapper.setup(:default, ENV['DATABASE_URL'] || "postgres://localhost/makers_bnb_#{ENV['RACK_ENV']}")
 DataMapper.finalize
 DataMapper.auto_upgrade! if ENV['RACK_ENV'] == 'test'

@@ -1,5 +1,6 @@
 ENV['RACK_ENV'] ||= 'development'
 
+require 'bcrypt'
 require 'json'
 require 'sinatra/base'
 require './app/models/data_mapper_setup'
@@ -25,7 +26,7 @@ class MakersBnB < Sinatra::Base
   end
 
   post '/signup/new' do
-    newuser = User.new(name: params[:name], email: params[:email], password: params[:password])
+    newuser = User.new(name: params[:name], email: params[:email], password: params[:password], password_confirmation: params[:password_confirmation])
     if newuser.save
       session[:email] = params[:email]
       redirect '/welcome'
@@ -41,7 +42,7 @@ class MakersBnB < Sinatra::Base
       redirect '/welcome'
     else
       redirect '/'
-    end
+    end 
   end
 
   get '/rental/new' do
