@@ -24,7 +24,10 @@ def add_rental2
 end
 
 def lewis_signup
+  visit '/'
+  click_button('Sign Up')
   fill_in('name', with: 'Lewis101')
   fill_in('email', with: 'lewis@gmail.com')
   fill_in('password', with: 'airbnbwithfrogs12')
+  click_button('Sign Up')
 end

@@ -12,8 +12,8 @@
 <body>
 
 <script src = "/src/jq.js"></script>
-<% if current_user %>
-  <h1>Welcome <%=current_user.name%></h1>
+<% if current_session_user %>
+  <h1>Welcome <%=current_session_user.name%></h1>
 <% end %>
 
   <input type="text" id="citySearch" placeholder="Search for city.."

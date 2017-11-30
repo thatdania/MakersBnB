@@ -11,8 +11,8 @@ class MakersBnB < Sinatra::Base
   enable :sessions
 
   helpers do
-    def current_user
-      @current_user ||= User.first(name: session[:name])
+    def current_session_user
+      @current_user ||= User.first(email: session[:email])
     end
   end
 
@@ -27,12 +27,20 @@ class MakersBnB < Sinatra::Base
   post '/signup/new' do
     newuser = User.new(name: params[:name], email: params[:email], password: params[:password])
     if newuser.save
-      session[:name] = params[:name]
-      p current_user
-      # @current_user = User.first(params[:name])
+      session[:email] = params[:email]
       redirect '/welcome'
     else
       erb :signup
+    end
+  end
+
+  post '/landing/login' do
+    user = User.first(email: params[:email])
+    if user
+      session[:email] = params[:email]
+      redirect '/welcome'
+    else
+      redirect '/'
     end
   end
 
