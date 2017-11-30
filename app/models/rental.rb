@@ -26,4 +26,12 @@ class Rental
     end
   data
   end
+
+  def self.individual(id)
+    individual =[]
+    individual << { user: self.first(id: id),
+                   images: Image.first(rental_id: id)
+                 }
+     individual
+   end
 end

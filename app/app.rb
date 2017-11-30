@@ -27,9 +27,9 @@ class MakersBnB < Sinatra::Base
     # File.open(File.join(File.dirname(__FILE__), '..', 'uploads', params[:picture][:filename]), "w") do |f|
     # f.write(params[:picture][:tempfile].read)
     # end
-    #  "<img src='#{@current_rental.images.first.source}' style='width:220px; height:300px;'>"
+    # "<img src='#{@current_rental.images.first.source}' style='width:220px; height:300px;'>"
 
-    redirect '/rental/list'
+    # redirect '/rental/list'
   end
 
   get '/rental/list' do
@@ -42,7 +42,10 @@ class MakersBnB < Sinatra::Base
 
 
   post '/rental/save' do
-    session[:rental] = Rental.get(params[:id])
+    session[:rental] = Rental.individual(params[:id])
+    # session[:rental] = Rental.get(params[:id])
+    # session[:image] = Image.first(rental_id: params[:id])
+    # p session[:image]
     redirect '/rental/overview'
   end
 
