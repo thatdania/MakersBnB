@@ -1,0 +1,144 @@
+body {
+  height: 200px;
+  background-color: #c64549;
+  margin:0px;
+     /*background: #ed5358;
+     background: -webkit-linear-gradient(#ed5358, #c63f43);
+     background: -o-linear-gradient(#ed5358, #c63f43);
+     background: -moz-linear-gradient(#ed5358, #c63f43);
+     background: linear-gradient(#ed5358, #c63f43);*/
+}
+
+h1 {
+  font-family: 'Cabin';
+  font-size: 35px;
+  font-weight: 700;
+  position: absolute;
+  top: 26%;
+  left: 42%;
+  text-align: center;
+  color: #212626;
+
+}
+
+h2{
+  font-family: 'Cabin';
+  font-size: 38px;
+  font-weight: 700;
+  position: absolute;
+  top: 31%;
+  left: 42%;
+  color: #212626;
+}
+
+.circle {
+     width: 550px;
+     height: 550px;
+     -webkit-border-radius: 75px;
+     -moz-border-radius: 75px;
+     border-radius: 300px;
+     background: #FCFFFF;
+     position: absolute;
+     top: 11%;
+     left: 27.9%;
+     box-shadow: 40px -10px  rgba(0,0,0,0);
+	   -moz-box-shadow: 20px -20px  rgba(0,0,0,0.3);
+	   -webkit-box-shadow: 40px -15px  rgba(0,0,0,0.3);
+	   -o-box-shadow: 20px -10px  rgba(0,0,0,0.3);
+   }
+
+.email {
+  background-color: #eff2f2;
+  border: 0;
+  padding: 12px 160px 12px 15px;
+  text-align: left;
+  border-radius: 25px;
+  box-shadow:  0 0 10px  rgba(179, 179, 179, 0.92);
+	/*-moz-box-shadow: 0 0 10px  rgba(189, 189, 189, 1);*/
+	-webkit-box-shadow: 0 0 20px  rgba(179, 179, 179, 0.92);
+	-o-box-shadow: 0 0 40px  rgba(179, 179, 179, 0.92);
+  outline: none;
+  font-family: 'Cabin';
+  position: absolute;
+  top: 50%;
+  left: 38.2%;
+}
+
+.password{
+  background-color: #eff2f2;
+  border: 0;
+  padding: 12px 160px 12px 15px;
+  position: absolute;
+  top: 58%;
+  left: 38.2%;
+  text-align: left;
+  border-radius: 25px;
+  border-radius: 25px;
+  box-shadow:  0 0 10px  rgba(179, 179, 179, 0.92);
+	-moz-box-shadow: 0 0 10px  rgba(179, 179, 179, 0.92);
+	-webkit-box-shadow: 0 0 20px  rgba(179, 179, 179, 0.92);
+	-o-box-shadow: 0 0 40px  rgba(179, 179, 179, 0.92s);
+  font-family: 'Cabin';
+  outline: none;
+}
+
+.signup{
+
+  border-radius: 14px;
+  padding: 13px 38px;
+  border: 0;
+  background-color: #e55459;
+  font-family: 'Cabin';
+  font-size: 15px;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 0.7px;
+  outline: none;
+  position: absolute;
+  top: 68%;
+  left: 38.5%;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #d1d1d1;
+}
+
+.login{
+
+  border-radius: 14px;
+  padding: 13px 40px;
+  border: 0;
+  background-color: #e55459;
+  font-family: 'Cabin';
+  font-size: 15px;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 0.7px;
+  outline: none;
+  position: absolute;
+  top: 68%;
+  left: 49.7%;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #d1d1d1;
+}
+
+.login:hover{
+    background:#41BFB9;
+}
+
+.login:active {
+  background:#41BFB9;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+
+.signup:hover{
+    background:#41BFB9;
+}
+
+.signup:active {
+  background:#41BFB9;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
