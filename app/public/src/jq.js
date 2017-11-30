@@ -18,11 +18,13 @@ $(document).ready(function() {
       $select.append($('<option></option>').val(i).html(i))
     }
   });
-
   function eachRental(element, index) {
     var container = index
     $('#rentals').append("<div id="+container+" class='individual' style='margin-top: 20;'></div>");
-    $("#"+container).append("<div id = 'whatever' class='name'><a href=\"#\">" + element.name + "</a></div>")
+
+    $("#"+container).append("<div class='image'><img style='width:100px; height:100px;' src= "+ element.images.first.source +"/></div>")
+
+    $("#"+container).append("<div class='name'><a href=\"#\">" + element.name + "</a></div>")
     $("#"+container).append("<div class='location'><b href=\"#\">" + element.location + "</b></div>")
     $("#"+container).append("<div class='price'><c href=\"#\">" + element.price + "</c></div>")
     $("#"+container).append("<div class='capacity'><d href=\"#\">" + element.capacity + "</d></div>")

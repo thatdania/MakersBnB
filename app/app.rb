@@ -18,17 +18,25 @@ class MakersBnB < Sinatra::Base
   post '/rental/new' do
     current_user = User.create(name: params[:user_name])
 
-    current_rental = Rental.create(name: params[:name], location: params[:location],
+    @current_rental = Rental.create(name: params[:name], location: params[:location],
       price: params[:price], capacity: params[:capacity], available: true,
       user_id: current_user.id)
-    current_image = Image.create(source: params[:picture], rental_id: current_rental.id)
-    redirect '/rental/list'
+    @current_image = Image.create(source: params[:picture], rental_id: @current_rental.id)
+
+    #  p ":::::::::::::" , Image.last.source
+    # File.open(File.join(File.dirname(__FILE__), '..', 'uploads', params[:picture][:filename]), "w") do |f|
+    # f.write(params[:picture][:tempfile].read)
+    # end
+        p "::::::::::::" , @current_rental.images.first.source
+   "<img src='#{@current_rental.images.first.source}' style='width:220px; height:300px;'>"
+    # redirect '/rental/list'
   end
 
   get '/rental/list' do
     headers 'Access-Control-Allow-Origin' => '*'
     content_type :json
     Rental.all.to_json
+    Image.all.to_json
   end
 
   post '/rental/save' do
