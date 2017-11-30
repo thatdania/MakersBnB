@@ -50,6 +50,7 @@ $(document).ready(function() {
     rentalCapacity = rentals.getElementsByClassName("capacity");
     rentalButton = rentals.getElementsByClassName("rentalButton");
     rentalImage = rentals.getElementsByClassName("image");
+    rentalDescription = rentals.getElementsByClassName("image");
 
     for (i = 0; i < rentalCity.length; i++) {
       a = rentalName[i].getElementsByTagName("a")[0];
@@ -58,6 +59,7 @@ $(document).ready(function() {
       d = rentalCapacity[i].getElementsByTagName("d")[0];
       e = rentalButton[i].getElementsByTagName("e")[0];
       f = rentalImage[i].getElementsByTagName("f")[0];
+      g = rentalDescription[i].getElementsByTagName("g")[0];
 
       if (b.innerHTML.toUpperCase().indexOf(filter) > -1 && d.innerHTML >= selectCapacity) {
         rentalName[i].style.display = "";
@@ -66,6 +68,7 @@ $(document).ready(function() {
         rentalCapacity[i].style.display = "";
         rentalButton[i].style.display = "";
         rentalImage[i].style.display = "";
+        rentalDescription[i].style.display = "";
 
       } else {
         rentalName[i].style.display = "none";
@@ -74,6 +77,7 @@ $(document).ready(function() {
         rentalCapacity[i].style.display = "none";
         rentalButton[i].style.display = "none";
         rentalImage[i].style.display = "none";
+        rentalDescription[i].style.display = "none";
       }
     }
   }
