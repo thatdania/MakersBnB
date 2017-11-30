@@ -14,7 +14,7 @@ h1 {
   font-size: 35px;
   font-weight: 700;
   position: absolute;
-  top: 26%;
+  top: 28%;
   left: 42%;
   text-align: center;
   color: #212626;
@@ -26,11 +26,17 @@ h2{
   font-size: 38px;
   font-weight: 700;
   position: absolute;
-  top: 31%;
+  top: 32%;
   left: 42%;
   color: #212626;
 }
+.icon {
 
+  position: absolute;
+  top: 23%;
+  left: 47%;
+
+}
 .circle {
      width: 550px;
      height: 550px;
@@ -39,7 +45,7 @@ h2{
      border-radius: 300px;
      background: #FCFFFF;
      position: absolute;
-     top: 11%;
+     top: 10%;
      left: 27.9%;
      box-shadow: 40px -10px  rgba(0,0,0,0);
 	   -moz-box-shadow: 20px -20px  rgba(0,0,0,0.3);
@@ -50,34 +56,27 @@ h2{
 .email {
   background-color: #eff2f2;
   border: 0;
-  padding: 12px 160px 12px 15px;
+  padding: 10px 145px 12px 15px;
   text-align: left;
   border-radius: 25px;
-  box-shadow:  0 0 10px  rgba(179, 179, 179, 0.92);
-	/*-moz-box-shadow: 0 0 10px  rgba(189, 189, 189, 1);*/
-	-webkit-box-shadow: 0 0 20px  rgba(179, 179, 179, 0.92);
-	-o-box-shadow: 0 0 40px  rgba(179, 179, 179, 0.92);
   outline: none;
   font-family: 'Cabin';
   position: absolute;
-  top: 50%;
-  left: 38.2%;
+  top: 49%;
+  left: 39%;
 }
 
 .password{
   background-color: #eff2f2;
   border: 0;
-  padding: 12px 160px 12px 15px;
+  padding: 10px 145px 12px 15px;
   position: absolute;
-  top: 58%;
-  left: 38.2%;
+  top: 57%;
+  left: 39%;
   text-align: left;
   border-radius: 25px;
   border-radius: 25px;
-  box-shadow:  0 0 10px  rgba(179, 179, 179, 0.92);
-	-moz-box-shadow: 0 0 10px  rgba(179, 179, 179, 0.92);
-	-webkit-box-shadow: 0 0 20px  rgba(179, 179, 179, 0.92);
-	-o-box-shadow: 0 0 40px  rgba(179, 179, 179, 0.92s);
+
   font-family: 'Cabin';
   outline: none;
 }
@@ -85,38 +84,35 @@ h2{
 .signup{
 
   border-radius: 14px;
-  padding: 13px 38px;
+  padding: 10px 112px;
   border: 0;
-  background-color: #e55459;
+  background-color: white;
   font-family: 'Cabin';
-  font-size: 15px;
+  font-size: 12px;
   font-weight: 700;
-  color: white;
+  color: #e55459;
   letter-spacing: 0.7px;
   outline: none;
   position: absolute;
-  top: 68%;
-  left: 38.5%;
-  border: none;
-  border-radius: 15px;
-  box-shadow: 0 9px #d1d1d1;
+  top: 73%;
+  left: 39%;
 }
 
 .login{
 
   border-radius: 14px;
-  padding: 13px 40px;
+  padding: 10px 116px;
   border: 0;
   background-color: #e55459;
   font-family: 'Cabin';
-  font-size: 15px;
+  font-size: 12px;
   font-weight: 700;
   color: white;
   letter-spacing: 0.7px;
   outline: none;
   position: absolute;
-  top: 68%;
-  left: 49.7%;
+  top: 65%;
+  left: 39%;
   border: none;
   border-radius: 15px;
   box-shadow: 0 9px #d1d1d1;
@@ -134,11 +130,5 @@ h2{
 
 
 .signup:hover{
-    background:#41BFB9;
-}
-
-.signup:active {
-  background:#41BFB9;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
+    color:#41BFB9;
 }

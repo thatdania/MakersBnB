@@ -1,0 +1,122 @@
+body {
+  height: 200px;
+  background-color: #c64549;
+  margin:0px;
+  padding: 0;
+  overflow-y: hidden;
+}
+
+.circle {
+     width: 750px;
+     height: 750px;
+     size: contain;
+     -webkit-border-radius: 75px;
+     -moz-border-radius: 75px;
+     border-radius: 500px;
+     background: #FCFFFF;
+     position: absolute;
+     top: -10%;
+     left: 20.5%;
+     background-position: center;
+   }
+
+   h2{
+     font-family: 'Cabin';
+     font-size: 26px;
+     font-weight: 700;
+     position: absolute;
+     top: 22%;
+     left: 42%;
+     color: #212626;
+   }
+
+   h3{
+     font-family: 'Cabin';
+     font-size: 38px;
+     font-weight: 700;
+     position: absolute;
+     top: 23%;
+     left: 41%;
+     color: #212626;
+   }
+
+  .name {
+    background-color: #eff2f2;
+    border: 0;
+    padding: 12px 160px 12px 15px;
+    text-align: left;
+    border-radius: 25px;
+    outline: none;
+    font-family: 'Cabin';
+    position: absolute;
+    top: 41%;
+    left: 39%;
+  }
+
+  .email {
+    background-color: #eff2f2;
+    border: 0;
+    padding: 12px 160px 12px 15px;
+    text-align: left;
+    border-radius: 25px;
+    outline: none;
+    font-family: 'Cabin';
+    position: absolute;
+    top: 49%;
+    left: 39%;
+  }
+
+  .password {
+    background-color: #eff2f2;
+    border: 0;
+    padding: 12px 160px 12px 15px;
+    text-align: left;
+    border-radius: 25px;
+    outline: none;
+    font-family: 'Cabin';
+    position: absolute;
+    top: 57%;
+    left: 39%;
+  }
+
+  .confirm {
+    background-color: #eff2f2;
+    border: 0;
+    padding: 12px 160px 12px 15px;
+    text-align: left;
+    border-radius: 25px;
+    outline: none;
+    font-family: 'Cabin';
+    position: absolute;
+    top: 65%;
+    left: 39%;
+  }
+
+  .submit{
+    border-radius: 14px;
+    padding: 10px 116px;
+    border: 0;
+    background-color: #e55459;
+    font-family: 'Cabin';
+    font-size: 12px;
+    font-weight: 700;
+    color: white;
+    letter-spacing: 0.7px;
+    outline: none;
+    position: absolute;
+    top: 73%;
+    left: 39%;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #d1d1d1;
+  }
+
+  .submit:hover{
+    background:#41BFB9;
+  }
+
+  .submit:active {
+    background:#41BFB9;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
