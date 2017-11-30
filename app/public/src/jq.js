@@ -12,22 +12,23 @@ $(document).ready(function() {
    });
   }
 
-  $(function(){
-    var $select = $(".selectCapacity");
-    for (i=1;i<=16;i++){
-      $select.append($('<option></option>').val(i).html(i))
-    }
-  });
   function eachRental(element, index) {
     var container = index
     $('#rentals').append("<div id="+container+" class='individual' style='margin-top: 20;'></div>");
-    $("#"+container).append("<div class='image'><img style='width:200px; height:120px;' src= "+ element['images']['source']['source']['url'] +"/></div>")
+    $("#"+container).append("<div class='image'> <f href=\"#\"> <img style='width:200px; height:120px;' src= "+ element['images']['source']['source']['url'] +"/></f></div>")
     $("#"+container).append("<div id = 'whatever' class='name'><a href=\"#\">" + element.name + "</a></div>")
     $("#"+container).append("<div class='location'><b href=\"#\">" + element.location + "</b></div>")
     $("#"+container).append("<div class='price'><c href=\"#\">" + element.price + "</c></div>")
     $("#"+container).append("<div class='capacity'><d href=\"#\">" + element.capacity + "</d></div>")
     $("#"+container).append("<form class='rentalButton' action='/rental/save' method='post'><e href=\"#\"><button id='more-info"+element.id+"' type='submit' name='id' value="+element.id+" class='rental_id'>More Info</button></e></form>")
   };
+
+  $(function(){
+    var $select = $(".selectCapacity");
+    for (i=1;i<=16;i++){
+      $select.append($('<option></option>').val(i).html(i))
+    }
+  });
 
   $("#selectCapacity").change(function() {
     search();
@@ -39,7 +40,7 @@ $(document).ready(function() {
 
   function search() {
     var selectCapacity = $("#selectCapacity").val()
-    var input, filter, rentals, rentalName, rentalCity, rentalPrice, rentalCapacity
+    var input, filter, rentals, rentalName, rentalCity, rentalPrice, rentalCapacity, rentalButton, rentalImage
     input = document.getElementById("citySearch");
     filter = input.value.toUpperCase();
     rentals = document.getElementById("rentals");
@@ -48,6 +49,7 @@ $(document).ready(function() {
     rentalPrice = rentals.getElementsByClassName("price");
     rentalCapacity = rentals.getElementsByClassName("capacity");
     rentalButton = rentals.getElementsByClassName("rentalButton");
+    rentalImage = rentals.getElementsByClassName("image");
 
     for (i = 0; i < rentalCity.length; i++) {
       a = rentalName[i].getElementsByTagName("a")[0];
@@ -55,6 +57,7 @@ $(document).ready(function() {
       c = rentalPrice[i].getElementsByTagName("c")[0];
       d = rentalCapacity[i].getElementsByTagName("d")[0];
       e = rentalButton[i].getElementsByTagName("e")[0];
+      f = rentalImage[i].getElementsByTagName("f")[0];
 
       if (b.innerHTML.toUpperCase().indexOf(filter) > -1 && d.innerHTML >= selectCapacity) {
         rentalName[i].style.display = "";
@@ -62,6 +65,7 @@ $(document).ready(function() {
         rentalPrice[i].style.display = "";
         rentalCapacity[i].style.display = "";
         rentalButton[i].style.display = "";
+        rentalImage[i].style.display = "";
 
       } else {
         rentalName[i].style.display = "none";
@@ -69,6 +73,7 @@ $(document).ready(function() {
         rentalPrice[i].style.display = "none";
         rentalCapacity[i].style.display = "none";
         rentalButton[i].style.display = "none";
+        rentalImage[i].style.display = "none";
       }
     }
   }
