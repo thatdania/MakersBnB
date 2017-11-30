@@ -12,6 +12,13 @@
 <body>
 
 <script src = "/src/jq.js"></script>
+<% if current_session_user %>
+  <h1>Welcome <%=current_session_user.name%></h1>
+<% end %>
+
+  <form class="" action="/welcome/logout" method="post">
+    <button type="submit">Logout</button>
+  </form>
 
   <input type="text" id="citySearch" placeholder="Search for city.."
     title="Search by city">

@@ -1,0 +1,15 @@
+Welcome to MakersBnB
+
+<form class="" action="/signup">
+  <button type="submit">Sign Up</button>
+</form>
+
+<form class="" action="/landing/login" method ="post">
+  <input type="email" name="email" placeholder="Email">
+  <input type="password" name="password" placeholder="Password">
+  <button type="submit">Login</button>
+</form>
+
+<% if flash[:error] %>
+<div> <%= flash[:error] %> </div>
+<% end %>

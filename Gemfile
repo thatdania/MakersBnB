@@ -12,6 +12,7 @@ gem 'dm-migrations'
 gem 'dm-transactions'
 gem 'json'
 gem 'sinatra'
+gem 'sinatra-flash'
 gem 'rack'
 
 group :test do
