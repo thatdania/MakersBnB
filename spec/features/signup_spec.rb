@@ -4,5 +4,6 @@ feature 'sign up' do
     lewis_signup
     click_button('Sign Up')
     expect(page).to have_current_path('/welcome')
+    expect(page).to have_content('Welcome Lewis')
   end
 end

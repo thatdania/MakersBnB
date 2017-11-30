@@ -25,9 +25,11 @@ class MakersBnB < Sinatra::Base
   end
 
   post '/signup/new' do
-    newuser = User.new(name: session[:name], email: params[:email], password: params[:password])
+    newuser = User.new(name: params[:name], email: params[:email], password: params[:password])
     if newuser.save
       session[:name] = params[:name]
+      p current_user
+      # @current_user = User.first(params[:name])
       redirect '/welcome'
     else
       erb :signup
