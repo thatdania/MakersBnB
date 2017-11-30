@@ -10,6 +10,14 @@ class MakersBnB < Sinatra::Base
 
   enable :sessions
 
+  get '/' do
+    erb :landing
+  end
+
+  get '/signup' do
+    erb :signup
+  end
+
   get '/rental/new' do
     headers 'Access-Control-Allow-Origin' => '*'
     erb :rental_new
