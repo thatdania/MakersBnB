@@ -8,6 +8,7 @@ class Rental
   property :price, Integer
   property :available, Boolean
   property :capacity, Integer
+  property :description, Text
 
   belongs_to :user
 
@@ -21,7 +22,8 @@ class Rental
                  location: ind.location,
                  price:    ind.price,
                  capacity: ind.capacity,
-                 images:   ind.images.first
+                 images:   ind.images.first,
+                 description:   ind.description
     }
     end
   data

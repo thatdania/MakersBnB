@@ -20,7 +20,7 @@ class MakersBnB < Sinatra::Base
 
     @current_rental = Rental.create(name: params[:name], location: params[:location],
       price: params[:price], capacity: params[:capacity], available: true,
-      user_id: current_user.id)
+      user_id: current_user.id, description: params[:description])
     @current_image = Image.create(source: params[:picture], rental_id: @current_rental.id)
 
     redirect '/welcome'
@@ -32,6 +32,12 @@ class MakersBnB < Sinatra::Base
     Rental.all_data.to_json
   end
 
+  post '/rental/book' do
+    p params
+    @startDate = params[:startDate]
+    @endDate = params[:endDate]
+    erb :booking_confirmation
+  end
 
   post '/rental/save' do
     session[:rental] = Rental.individual(params[:id])

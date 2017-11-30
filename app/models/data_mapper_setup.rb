@@ -8,13 +8,13 @@ require_relative './user.rb'
 require_relative './image.rb'
 
 CarrierWave.configure do |config|
-  if ENV['RACK_ENV'] == 'development'
+  # if ENV['RACK_ENV'] == 'development'
     config.storage :file
     config.root = File.join(File.dirname(__FILE__), '..', 'public')
     config.store_dir = File.join('uploads')
-  else
+  # else
    #Configure AMAZON storage
-  end
+  # end
 end
 
 DataMapper::Model.raise_on_save_failure = true

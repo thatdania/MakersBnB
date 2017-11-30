@@ -1,17 +1,54 @@
 <!DOCTYPE html>
 <head>
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-
+  <!-- DATEPICKER -->
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 </head>
 
 <body>
-
   <div id="rental-overview"></div>
+
+  <div id="rental-image"></div>
+  <br>
+  <div id="rental-name"></div>
+  <br>
+  <div id="rental-location">Location: </div>
+  <br>
+  <div id="rental-price">£</div>
+  <br>
+  <div id="rental-capacity">Amount of Beds: </div>
+  <br>
+  <div id="rental-available">Available:</div>
+  <br>
+  <div id="rental-description"></div>
+  <br>
+
+  <!-- <p>Start date: <input type="text" id="startPicker"></p>
+  <p>End date:   <input type="text" id="endPicker"></p> -->
+  <br>
+
+  <!-- <div id="rental-booking-button"></div> -->
+
+  <form class='bookButton' action='/rental/book' method='post'>
+    <p>Start date: <input type="text" id="startDate" name="startDate"></p>
+    <p>End date:   <input type="text" id="endDate" name="endDate"></p>
+    <button type='submit'>Book</button>
+  </form>
+  <br>
+
+  <div>
+
+  </div>
+
 
   <script src = "/src/rental_overview.js"></script>
 
   <form method='get' action='/welcome'>
     <button type="submit">back</button>
   </form>
+
 
 </body>
