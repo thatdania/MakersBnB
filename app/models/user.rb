@@ -29,5 +29,14 @@ class User
     end
   end
 
+  def self.email_checker(email)
+    user = first(email: email)
+    if user
+      true
+    else
+      false
+    end
+  end
+
   validates_confirmation_of :password
 end

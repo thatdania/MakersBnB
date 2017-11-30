@@ -28,13 +28,18 @@ class MakersBnB < Sinatra::Base
   end
 
   post '/signup/new' do
-    newuser = User.new(name: params[:name], email: params[:email], password: params[:password], password_confirmation: params[:password_confirmation])
-    if newuser.save
-      session[:email] = params[:email]
-      redirect '/welcome'
-    else
-      flash.now[:message] = 'Passwords do not match'
+    if User.email_checker(params[:email])
+      flash.now[:inuse] = 'Email already in use. SOZ LOLZ!!!!!'
       erb :signup
+    else
+      newuser = User.new(name: params[:name], email: params[:email], password: params[:password], password_confirmation: params[:password_confirmation])
+      if newuser.save
+        session[:email] = params[:email]
+        redirect '/welcome'
+      else
+        flash.now[:message] = 'Passwords do not match'
+        erb :signup
+      end
     end
   end
 

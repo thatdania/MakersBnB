@@ -12,4 +12,10 @@ feature 'sign up' do
     failed_signup
     expect(page).to have_content('Passwords do not match')
   end
+  scenario "user can't sign up with the same email twice" do
+    lewis_signup
+    click_button('Logout')
+    lewis_signup_2
+    expect(page).to have_content('Email already in use. SOZ LOLZ!!!!!')
+  end
 end

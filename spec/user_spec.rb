@@ -11,4 +11,8 @@ describe User do
   it "doesn't authenticate when the password is incorrect" do
     expect(User.authenticate(user.email, 'thewrongpassword')).to be_nil
   end
+
+  it "returns true if email already in use" do
+    expect(User.email_checker('lewis@gmail.com')).to eq(true)
+  end
 end
