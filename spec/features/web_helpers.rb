@@ -22,3 +22,9 @@ def add_rental2
   fill_in 'user_name', with: 'Lewis'
   click_on('submit')
 end
+
+def lewis_signup
+  fill_in('name', with: 'Lewis101')
+  fill_in('email', with: 'lewis@gmail.com')
+  fill_in('password', with: 'airbnbwithfrogs12')
+end
