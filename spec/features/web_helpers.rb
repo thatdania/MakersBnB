@@ -29,7 +29,7 @@ def failed_signup
   fill_in('name', with: 'Lewis101')
   fill_in('email', with: 'lewis@gmail.com')
   fill_in('password', with: 'airbnbwithfrogs12')
-  fill_in('confirm_password', with: 'airbnbwithfrogs')
+  fill_in('password_confirmation', with: 'airbnbwithfrogs')
   click_button('Sign Up')
 end
 
@@ -39,6 +39,6 @@ def lewis_signup
   fill_in('name', with: 'Lewis101')
   fill_in('email', with: 'lewis@gmail.com')
   fill_in('password', with: 'airbnbwithfrogs12')
-  fill_in('confirm_password', with: 'airbnbwithfrogs12')
+  fill_in('password_confirmation', with: 'airbnbwithfrogs12')
   click_button('Sign Up')
 end
