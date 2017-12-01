@@ -14,13 +14,15 @@ $(document).ready(function() {
 
   function eachRental(element, index) {
     var container = index
-    $('#rentals').append("<div id="+container+" class='individual' style='margin-top: 20;'></div>");
-    $("#"+container).append("<div class='image'> <f href=\"#\"> <img style='width:200px; height:120px;' src= "+ element['images']['source']['source']['url'] +"/></f></div>")
-    $("#"+container).append("<div id = 'whatever' class='name'><a href=\"#\">" + element.name + "</a></div>")
-    $("#"+container).append("<div class='location'><b href=\"#\">" + element.location + "</b></div>")
-    $("#"+container).append("<div class='price'><c href=\"#\">" + element.price + "</c></div>")
-    $("#"+container).append("<div class='capacity'><d href=\"#\">" + element.capacity + "</d></div>")
-    $("#"+container).append("<form class='rentalButton' action='/rental/save' method='post'><e href=\"#\"><button id='more-info"+element.id+"' type='submit' name='id' value="+element.id+" class='rental_id'>More Info</button></e></form>")
+    $('#rentals').append("<div id="+container+" class='container' style='margin-top: 20;'</div>");
+    // $("#"+container).append("<div class=</div>")
+    $("#"+container).append("<div class='image'> <f href=\"#\"> <img style='width:240px; height:160px;border-radius:10px' src= "+ element['images']['source']['source']['url'] +"/></f></div>")
+    $("#"+container).append("<div id = 'whatever' class='name' property'><a href=\"#\">" + element.name + "</a></div>")
+    $("#"+container).append("<div class='location test'><b href=\"#\">" + element.location + "</b></div>")
+    $("#"+container).append("<div class='price'><c href=\"#\">" + "£" + element.price + "</c></div>")
+    $("#"+container).append("<div class='capacity'><d href=\"#\">" + "Guests: "+ element.capacity + "</d></div>")
+    $("#"+container).append("<form class='rentalButton' action='/rental/save' method='post'><e href=\"#\"><button id='more-info"+element.id+"' type='submit' class='button' name='id' value="+element.id+" class='rental_id'>More Info</button></e></form>")
+
   };
 
   $(function(){

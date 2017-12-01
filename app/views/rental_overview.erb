@@ -1,41 +1,55 @@
 <!DOCTYPE html>
 <head>
-  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
   <!-- DATEPICKER -->
-  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-  <link rel="stylesheet" href="/resources/demos/style.css">
+  <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
+  <link rel="stylesheet" type="text/css" href="/style/rental_overview.css">
+  <link href='https://fonts.googleapis.com/css?family=Cabin' rel='stylesheet'>
 </head>
 
 <body>
-  <div id="rental-overview"></div>
 
-  <div id="rental-image"></div>
-  <br>
-  <div id="rental-name"></div>
-  <br>
-  <div id="rental-location">Location: </div>
-  <br>
-  <div id="rental-price">£</div>
-  <br>
-  <div id="rental-capacity">Amount of Beds: </div>
-  <br>
-  <div id="rental-available">Available:</div>
-  <br>
-  <div id="rental-description"></div>
-  <br>
+<div class="square"></div>
+<div class="tab"></div>
+<div class="blockd"></div>
 
-  <!-- <p>Start date: <input type="text" id="startPicker"></p>
-  <p>End date:   <input type="text" id="endPicker"></p> -->
+  <div id="rental-overview" class="overview"></div>
+
+  <div id="rental-image" class="image"></div>
+  <br>
+  <div id="rental-name" class="name"></div>
+  <br> <h1> Location: </h1>
+  <div id="rental-location" class="location"></div>
+  <br> <h2> £ </h2>
+  <div id="rental-price" class="price"></div>
+  <br>
+  <div id="rental-capacity" class="bed">Amount of Beds: </div>
   <br>
 
-  <!-- <div id="rental-booking-button"></div> -->
+  <div id="rental-available" class="available">Available:</div>
+
+  <br>
+
+  <h3> “ </h3>
+
+    <div class="move">
+  <div id="rental-description" class="description">
+</div>
+
+  </div><h4> ” </h4>
+
+  <br>
+
+  <br>
+
+
 
   <form class='bookButton' action='/rental/book' method='post'>
-    <p>Start date: <input type="text" id="startDate" name="startDate"></p>
-    <p>End date:   <input type="text" id="endDate" name="endDate"></p>
-    <button type='submit'>Book</button>
+    <p>Start date: </p> <input type="text" id="startDate" class="Start" name="startDate">
+    <h5>End date: </h5>  <input type="text" id="endDate" class="End" name="endDate">
+    <button type='submit' class="Book" >Book</button>
   </form>
   <br>
 
@@ -44,11 +58,12 @@
   </div>
 
 
-  <script src = "/src/rental_overview.js"></script>
 
   <form method='get' action='/welcome'>
-    <button type="submit">back</button>
+    <button type="submit" class="back" >back</button>
   </form>
 
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src = "/src/rental_overview.js"></script>
 
 </body>

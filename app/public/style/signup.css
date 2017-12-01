@@ -61,7 +61,8 @@ body {
   .name {
     background-color: #eff2f2;
     border: 0;
-    padding: 12px 160px 12px 15px;
+    width: 274px;
+    padding: 12px 15px;
     text-align: left;
     border-radius: 25px;
     outline: none;
@@ -80,7 +81,8 @@ body {
   .email {
     background-color: #eff2f2;
     border: 0;
-    padding: 12px 160px 12px 15px;
+    width: 274px;
+    padding: 12px 15px;
     text-align: left;
     border-radius: 25px;
     outline: none;
@@ -93,7 +95,8 @@ body {
   .password {
     background-color: #eff2f2;
     border: 0;
-    padding: 12px 160px 12px 15px;
+    width: 274px;
+    padding: 12px 15px;
     text-align: left;
     border-radius: 25px;
     outline: none;
@@ -106,7 +109,8 @@ body {
   .confirm {
     background-color: #eff2f2;
     border: 0;
-    padding: 12px 160px 12px 15px;
+    width: 274px;
+    padding: 12px 15px;
     text-align: left;
     border-radius: 25px;
     outline: none;

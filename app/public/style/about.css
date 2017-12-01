@@ -32,7 +32,7 @@ body {
     letter-spacing: 0.7px;
     outline: none;
     position: absolute;
-    top: 70%;
+    top: 65%;
     left: 68%;
     border: none;
     border-radius: 15px;
@@ -44,10 +44,10 @@ body {
     cursor: pointer;
 
   }
-
+  
   .home:active {
     background:#41BFB9;
-    box-shadow: 0 5px #666;
+    box-shadow: 0 5px #41BFB9;
     color: white;
     transform: translateY(4px);
   }
@@ -72,12 +72,13 @@ body {
     left: 28%;
   }
 
-  p{font-family: 'Cabin';
+  p {
+  font-family: 'Cabin';
   font-size: 14px;
   font-weight: 400;
   text-align: justify;
   position: absolute;
-  top:39%;
+  top:40%;
   left: 21%;
   }
 
@@ -111,4 +112,10 @@ body {
     box-shadow: 0 5px #212626;
     color: white;
     transform: translateY(4px);
+  }
+
+  .team{
+    position: absolute;
+    top: 15%;
+    left: 60%;
   }
