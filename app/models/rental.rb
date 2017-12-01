@@ -13,6 +13,8 @@ class Rental
   belongs_to :user
 
   has n, :images
+  has n, :reviews
+  has n, :likes
 
   def self.all_data
     data = []
@@ -23,17 +25,37 @@ class Rental
                  price:    ind.price,
                  capacity: ind.capacity,
                  images:   ind.images.first,
-                 description:   ind.description
+                 description:   ind.description,
+                 likes:     ind.likes
+
     }
     end
   data
   end
 
+  def self.all_reviews
+    array = []
+    Review.all.each do |x|
+     if x.rental_id == 2
+       array << x
+     end
+    end
+    array
+  end
+
   def self.individual(id)
+    # array = []
+    # Review.all.each do |x|
+    #  if x.rental_id == id.to_i
+    #    array << x
+    #  end
+    # end
     individual =[]
     individual << { user: self.first(id: id),
-                   images: Image.first(rental_id: id)
-                 }
+                   images: Image.first(rental_id: id),
+                   reviews: Review.all(rental_id: id.to_i)
+                  }
      individual
-   end
+  end
+
 end
