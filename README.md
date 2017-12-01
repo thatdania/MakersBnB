@@ -1,6 +1,8 @@
 AIRBNB Challenge:
 ===============
 
+![](readmeimages/1.jpg)
+
 The challenge is to recreate as much of AIRBNB as possible within a week. Great fun.
 
 MVP:  
@@ -44,6 +46,8 @@ Other Accomplished User Stories:
 
 Team:
 =======
+
+![](readmeimages/2.jpg)
 
 - Dania Mah (https://github.com/thatdania)
 - Lewis Youl (https://github.com/LewisYoul)
