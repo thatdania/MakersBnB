@@ -6,6 +6,9 @@ require_relative './imageuploader.rb'
 require_relative './rental.rb'
 require_relative './user.rb'
 require_relative './image.rb'
+require_relative './review.rb'
+require_relative './like.rb'
+
 
 CarrierWave.configure do |config|
   # if ENV['RACK_ENV'] == 'development'

@@ -14,6 +14,7 @@ class User
   property :encrypted_password, Text
 
   has n, :rentals
+  has n, :reviews
 
   def password=(password)
     @password = password
