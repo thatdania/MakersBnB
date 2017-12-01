@@ -12,6 +12,7 @@ $(document).ready(function(){
     $("#rental-available").append("<span class='available'>" + available + "</span>")
     // $("#rental-booking-button").append("<form class='bookButton' action='/rental/book' method='post'><input id='startDate' name='startDate'/><button type='submit'>Book</button></form>")
     $("#rental-description").append("<span class='description'>" + rental[0]['user']['description'] + "</span>")
+    $("#rental-review").append("<span class='review'>" + rental[0]['user']['description'] + "</span>")
 
   });
 

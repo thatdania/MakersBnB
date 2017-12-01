@@ -60,11 +60,11 @@ class MakersBnB < Sinatra::Base
   end
 
   post '/rental/new' do
-    current_user = User.create(name: params[:user_name])
+    @current_user = User.create(name: params[:user_name])
 
     @current_rental = Rental.create(name: params[:name], location: params[:location],
       price: params[:price], capacity: params[:capacity], available: true,
-      user_id: current_user.id, description: params[:description])
+      user_id: @current_user.id, description: params[:description])
     @current_image = Image.create(source: params[:picture], rental_id: @current_rental.id)
 
     redirect '/welcome'
@@ -74,6 +74,7 @@ class MakersBnB < Sinatra::Base
     headers 'Access-Control-Allow-Origin' => '*'
     content_type :json
     Rental.all_data.to_json
+    # Review.all.to_json
   end
 
   post '/rental/book' do
@@ -83,17 +84,29 @@ class MakersBnB < Sinatra::Base
   end
 
   post '/rental/save' do
-    session[:rental] = Rental.individual(params[:id])
+    session[:id]= params[:id]
     redirect '/rental/overview'
   end
 
   get '/rental/current_view' do
+    rental = Rental.individual(session[:id])
     content_type :json
-    session[:rental].to_json
+    rental.to_json
   end
 
   get '/rental/overview' do
     erb :rental_overview
+  end
+
+  get '/rental/save' do
+  session[:rental] = Rental.individual(params[:id])
+    redirect '/rental/overview'
+  end
+
+  post '/rental/overview' do
+  Review.create(description: params[:description],
+                  experience: true , user_id: current_session_user.id, rental_id: session[:id])
+    redirect '/rental/overview'
   end
 
   get '/welcome' do

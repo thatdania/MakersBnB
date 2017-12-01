@@ -20,6 +20,27 @@ feature 'welcome page', js: true do
     expect(page).to have_content('Cornwall', 245, 3)
   end
 
+
+  scenario 'Users can leave a review for the properties they stayed in ' do
+    add_all_rentals
+    # book_property
+    visit '/welcome'
+    click_button('more-info1')
+    fill_in 'review-box', with: 'Lovely appartment'
+    expect(page).to have_content('Thank you for leaving a review')
+  end
+
+
+  xscenario 'User can read property reviews from people who stayed there' do
+    add_all_rentals
+    # book_property
+    # Leave_review
+    visit '/welcome'
+    click_button('more-info1')
+    expect(page).to have_current_path('/rental/overview')
+    expect(page).to have_content('Thank you for leaving a review')
+  end
+
   scenario 'user can search by guest capacity' do
     add_all_rentals
     visit '/welcome'
