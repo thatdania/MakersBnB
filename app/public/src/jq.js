@@ -22,13 +22,18 @@ $(document).ready(function() {
     $("#"+container).append("<div class='capacity'><d href=\"#\">" + element.capacity + "</d></div>")
     $("#"+container).append("<form class='rentalButton' action='/rental/save' method='post'><e href=\"#\"><button id='more-info"+element.id+"' type='submit' name='id' value="+element.id+" class='rental_id'>More Info</button></e></form>")
   };
-
+``
   $(function(){
-    var $select = $(".selectCapacity");
-    for (i=1;i<=16;i++){
-      $select.append($('<option></option>').val(i).html(i))
+    for (i=1;i<=9;i++){
+      $("#selectCapacity").append($('<option></option>').val(i).html(i))
     }
   });
+
+  $(function(){
+    for (i=1000;i>=100;i-=100){
+      $('#selectPrice').append($('<option></option>').val(i).html(i))
+    }
+  })
 
   $("#selectCapacity").change(function() {
     search();
@@ -38,8 +43,13 @@ $(document).ready(function() {
     search();
   });
 
+  $("#selectPrice").change(function(){
+    search()
+  });
+
   function search() {
     var selectCapacity = $("#selectCapacity").val()
+    var selectPrice = $('#selectPrice').val()
     var input, filter, rentals, rentalName, rentalCity, rentalPrice, rentalCapacity, rentalButton, rentalImage
     input = document.getElementById("citySearch");
     filter = input.value.toUpperCase();
@@ -50,7 +60,6 @@ $(document).ready(function() {
     rentalCapacity = rentals.getElementsByClassName("capacity");
     rentalButton = rentals.getElementsByClassName("rentalButton");
     rentalImage = rentals.getElementsByClassName("image");
-    rentalDescription = rentals.getElementsByClassName("image");
 
     for (i = 0; i < rentalCity.length; i++) {
       a = rentalName[i].getElementsByTagName("a")[0];
@@ -59,16 +68,14 @@ $(document).ready(function() {
       d = rentalCapacity[i].getElementsByTagName("d")[0];
       e = rentalButton[i].getElementsByTagName("e")[0];
       f = rentalImage[i].getElementsByTagName("f")[0];
-      g = rentalDescription[i].getElementsByTagName("g")[0];
 
-      if (b.innerHTML.toUpperCase().indexOf(filter) > -1 && d.innerHTML >= selectCapacity) {
+      if ((b.innerHTML.toUpperCase().indexOf(filter) > -1) && (d.innerHTML >= selectCapacity) && (c.innerHTML <= selectPrice)) {
         rentalName[i].style.display = "";
         rentalCity[i].style.display = "";
         rentalPrice[i].style.display = "";
         rentalCapacity[i].style.display = "";
         rentalButton[i].style.display = "";
         rentalImage[i].style.display = "";
-        rentalDescription[i].style.display = "";
 
       } else {
         rentalName[i].style.display = "none";
@@ -77,7 +84,6 @@ $(document).ready(function() {
         rentalCapacity[i].style.display = "none";
         rentalButton[i].style.display = "none";
         rentalImage[i].style.display = "none";
-        rentalDescription[i].style.display = "none";
       }
     }
   }
