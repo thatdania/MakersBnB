@@ -20,23 +20,29 @@ When I'm looking on this MakersBNB,
 I would like to see the property overview that I've selected
 
 ```
-We started off with listing all the AIRBNB user stories that could possibly exist from researching the workflow of how a User engages with AIRBNB.
-After that, we narrowed it down to three and chose the three user stories that would make our website unique
+We started off with listing all the AIRBNB user stories that could possibly exist from researching the workflow of how a User engages with AIRBNB. After that, we narrowed it down to three and chose the three user stories that would make our website unique
 
-Other User Stories:
+Other Accomplished User Stories:
 ====================
 
 ```
-As a user,
-When I'm looking on this MakersBNB,
-I would like to search properties by capacity
-
-As a user,
-When I'm looking on this MakersBNB,
-I would like to search properties by price
+- User can sign in to the website 
+-User can log in to the website
+-User can log out from the website
+-User can’t use the same username that has been installed
+-User has to make sure the passwords are the same.
+-User can search by city
+-User can search by date
+-When search, the list automatically reduces
+-User can check out individual booking (Page)
+-User can see the image of place, the availability, the guests, the price on the individual page 
+-User can book and receives a confirmation page
+-User can go back to the home page after confirmation 
+-User gets to enjoy a nice interface during the experience 
 
 
 ```
+User can sign in to the website
 
 
 Team:
