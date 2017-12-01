@@ -39,10 +39,7 @@ Other Accomplished User Stories:
 -User can book and receives a confirmation page
 -User can go back to the home page after confirmation 
 -User gets to enjoy a nice interface during the experience 
-
-
 ```
-User can sign in to the website
 
 
 Team:
