@@ -41,4 +41,12 @@ feature 'welcome page', js: true do
     click_button('Logout')
     expect(page).to have_current_path('/')
   end
+
+  scenario 'user can go to about page'do
+  add_all_rentals
+  visit '/welcome'
+  click_button('About')
+  expect(page).to have_current_path('/about')
+  end
+
 end

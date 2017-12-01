@@ -104,4 +104,10 @@ class MakersBnB < Sinatra::Base
     current_session_user = nil
     redirect '/'
   end
+
+
+get '/about' do
+  erb :about
+end
+
 end

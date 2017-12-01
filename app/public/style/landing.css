@@ -2,11 +2,6 @@ body {
   height: 200px;
   background-color: #c64549;
   margin:0px;
-     /*background: #ed5358;
-     background: -webkit-linear-gradient(#ed5358, #c63f43);
-     background: -o-linear-gradient(#ed5358, #c63f43);
-     background: -moz-linear-gradient(#ed5358, #c63f43);
-     background: linear-gradient(#ed5358, #c63f43);*/
 }
 
 h1 {
@@ -31,7 +26,6 @@ h2{
   color: #212626;
 }
 .icon {
-
   position: absolute;
   top: 23%;
   left: 47%;
@@ -96,10 +90,10 @@ h2{
   position: absolute;
   top: 73%;
   left: 39%;
+  cursor: hand;
 }
 
 .login{
-
   border-radius: 14px;
   padding: 10px 116px;
   border: 0;
@@ -119,7 +113,8 @@ h2{
 }
 
 .login:hover{
-    background:#41BFB9;
+  background:#41BFB9;
+  cursor: pointer;
 }
 
 .login:active {
@@ -131,4 +126,5 @@ h2{
 
 .signup:hover{
     color:#41BFB9;
+    cursor: pointer;
 }

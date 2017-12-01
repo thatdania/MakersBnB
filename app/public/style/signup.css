@@ -18,6 +18,10 @@ body {
      top: -10%;
      left: 20.5%;
      background-position: center;
+     box-shadow: 40px -10px  rgba(0,0,0,0);
+    -moz-box-shadow: 20px -20px  rgba(0,0,0,0.3);
+    -webkit-box-shadow: -40px 35px  rgba(0,0,0,0.3);
+    -o-box-shadow: 20px -10px  rgba(0,0,0,0.3);
    }
 
    h2{
@@ -39,7 +43,21 @@ body {
      left: 41%;
      color: #212626;
    }
-
+.account{
+  border-radius: 14px;
+  padding: 10px 112px;
+  border: 0;
+  background-color: white;
+  font-family: 'Cabin';
+  font-size: 12px;
+  font-weight: 700;
+  color: #e55459;
+  letter-spacing: 0.7px;
+  outline: none;
+  position: absolute;
+  top: 81.5%;
+  left: 35%;
+}
   .name {
     background-color: #eff2f2;
     border: 0;
@@ -51,6 +69,12 @@ body {
     position: absolute;
     top: 41%;
     left: 39%;
+  }
+
+  .icon{
+    position: absolute;
+    top: 15%;
+    left: 48%;
   }
 
   .email {
@@ -93,6 +117,7 @@ body {
   }
 
   .submit{
+    cursor: pointer;
     border-radius: 14px;
     padding: 10px 116px;
     border: 0;
@@ -111,8 +136,14 @@ body {
     box-shadow: 0 9px #d1d1d1;
   }
 
+  .account:hover{
+    color:#41BFB9;
+    cursor: pointer;
+  }
+
   .submit:hover{
     background:#41BFB9;
+    cursor: pointer;
   }
 
   .submit:active {
