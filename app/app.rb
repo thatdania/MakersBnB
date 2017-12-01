@@ -14,9 +14,15 @@ class MakersBnB < Sinatra::Base
   register Sinatra::Flash
 
   helpers do
-    def current_session_user
-      @current_user ||= User.first(email: session[:email])
+
+    def reset_current_session_user
+      @current_user = nil
     end
+
+    def current_session_user
+      @current_user ||= User.first(email: session[:email]) if session[:email]
+    end
+
   end
 
   get '/' do
@@ -100,8 +106,9 @@ class MakersBnB < Sinatra::Base
     erb :welcome
   end
 
-  post '/welcome/logout' do
-    current_session_user = nil
+  get '/welcome/logout' do
+    session.clear
+    reset_current_session_user
     redirect '/'
   end
 
