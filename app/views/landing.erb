@@ -29,10 +29,11 @@
 
 
 
-
-<% if flash[:error] %>
-<div> <%= flash[:error] %> </div>
-<% end %>
+<div class="flasherror">
+  <% if flash[:error] %>
+  <div> <%= flash[:error] %> </div>
+  <% end %>
+</div>
 
 
 

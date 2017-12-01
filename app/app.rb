@@ -49,7 +49,7 @@ class MakersBnB < Sinatra::Base
       session[:email] = params[:email]
       redirect '/welcome'
     else
-      flash.now[:error] = 'Email and Password does not match'
+      flash.now[:error] = 'Email and Password does not match' 
       erb :landing
     end
   end
