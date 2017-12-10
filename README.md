@@ -1,9 +1,9 @@
-AIRBNB Challenge:
+AIRBNB Challenge: 
 ===============
 
 ![](readmeimages/1.jpg)
 
-The challenge is to recreate as much of AIRBNB as possible within a week. Great fun.
+The challenge is to recreate as much of AIRBNB as possible within a week. Great fun.🏡
 
 MVP:  
 ======
@@ -49,7 +49,9 @@ Team:
 
 ![](readmeimages/2.jpg)
 
-- Dania Mah (https://github.com/thatdania)
-- Lewis Youl (https://github.com/LewisYoul)
-- Oleg Grushetskyy (https://github.com/olegfkl)
--  Robert Clayton (https://github.com/RobertClayton)
+- 🐱 Dania Mah (https://github.com/thatdania)
+- 🐸 Lewis Youl (https://github.com/LewisYoul)
+- 🐻 Oleg Grushetskyy (https://github.com/olegfkl)
+- 🐯 Robert Clayton (https://github.com/RobertClayton)
+
+
