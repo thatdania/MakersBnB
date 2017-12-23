@@ -3,7 +3,10 @@ AIRBNB Challenge:
 
 ![](readmeimages/1.jpg)
 
-The challenge is to recreate as much of AIRBNB as possible within a week. Great fun.🏡
+The challenge is to recreate as much of AIRBNB as possible within a week. 
+My role in this project was supporting my pairs with the approach to the problem and pairing together, coding the front and back end. My main contribution was the appearance and UX design.
+
+More about the progress: https://medium.com/@thatdania/episode-30-did-we-do-a-good-job-reflection-on-the-airbnb-challenge-d60b9da73773
 
 MVP:  
 ======
@@ -53,5 +56,3 @@ Team:
 - 🐸 Lewis Youl (https://github.com/LewisYoul)
 - 🐻 Oleg Grushetskyy (https://github.com/olegfkl)
 - 🐯 Robert Clayton (https://github.com/RobertClayton)
-
-
