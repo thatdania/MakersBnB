@@ -22,14 +22,12 @@ cd MakersBNB
 ```
 bundle install 
 ```
-4. Migrate the database (so the website starts off clean with the given data)
+4. Run Rackup!
 ```
+rackup
 ```
 
-5. Run the project!
-```
-```
-Enjoy!
+Enjoy the journey through MakersBNB!
 
 # Approach 
 Our strategy was to first research AIRBNB and document the workflow of the website. From there, we could decide what was our MVP (our 
