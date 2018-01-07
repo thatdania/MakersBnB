@@ -1,5 +1,5 @@
 <h1 align="center">
-  # MakersBnb 
+   MakersBnb 
 </h1>
 
 [How To Use](#how-to-use) | [Approach](#approach) | [MVP](#mvp) | [Other User Stories](#other-user-stories) | [Team](#team)  
