@@ -1,4 +1,6 @@
-# AIRBNB Challenge: 
+<h1 align="center">
+  # MakersBnb 
+</h1>
 
 [How To Use](#how-to-use) | [Approach](#approach) | [MVP](#mvp) | [Other User Stories](#other-user-stories) | [Team](#team)  
 
@@ -6,6 +8,8 @@
 
 The challenge is to recreate as much of AIRBNB as possible within a week. As much as I pair programmed with the team to code whatever I could for the front and back end, my main contribution was the appearance and UX design of the website. Note: This website is not 
 responsive, it will look perfect on a MACBOOK pro 13-inch. 
+
+***
 
 # How to use 
 
@@ -26,8 +30,8 @@ bundle install
 ```
 rackup
 ```
-
 Enjoy the journey through MakersBNB!
+***
 
 # Approach 
 Our strategy was to first research AIRBNB and document the workflow of the website. From there, we could decide what was our MVP (our 
@@ -52,6 +56,7 @@ When I'm looking on this MakersBNB,
 I would like to see the property overview that I've selected
 
 ```
+***
 
 # Other User Stories:
 
@@ -72,6 +77,7 @@ Below, are the other user stories that were accomplished once we extended from o
 -User can go back to the home page after confirmation 
 -User gets to enjoy a nice interface during the experience 
 ```
+***
 # Team 
 
 ![](readmeimages/2.jpg)
